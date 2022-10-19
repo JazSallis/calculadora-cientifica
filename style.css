@@ -19,6 +19,7 @@ body{
     background-size: cover;
     margin: none;
     padding: none;
+    position: relative;
 }
 
 
@@ -29,32 +30,42 @@ body{
     height: 90%;
     width: 60%;
     grid-template-columns: auto;
-    grid-template-rows: 30% 65%;
+    grid-template-rows: 25% 75%;
     border: 1px solid black;
     border-radius: 0.6rem;
     background-color: #615f5f;
     box-shadow: 4px 4px #1c1b1b;
+    position: absolute;
 }
 
 /* PANTALLA DE LA CALCULADORA */
+
+h1{
+    margin: 0.3rem;
+    padding-top: none;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+}
 
 #contenedor-pantalla{
     background-color: #424242;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
 }
 
 #displayBox{
-    height: 5rem;
+    height: 3.5rem;
     width: 90%;
     background-color: #6D758C;
     border: 1px solid black;
     border-radius: 0.5rem;
-    margin: 1rem;
     box-shadow: 0px 0px 5px black;
 }
 
@@ -146,3 +157,46 @@ input {
     box-shadow: none;
 }
 
+/* BOTON MEME */
+
+#bMeme{
+    color: white;
+    background-color: rgba(255, 21, 130, 0.356);
+    padding: 1rem 0.5rem;
+    border-radius: 5rem;
+    border: 0.5px solid rgb(150, 9, 74) ;
+    box-shadow: 2px 2px rgb(92, 233, 255);
+    margin: 0rem 2px 2px 0rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#bMeme:hover{
+    background-color: rgba(248, 236, 61, 0.363);
+    color: black;
+    border: 0.5px solid rgb(118, 113, 31);
+    box-shadow: 2px 2px rgb(255, 77, 0);
+}
+
+#bMeme:active{
+    margin: 2px 0rem 0rem 2px;
+}
+
+
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width:574px){
+    #calculadora{
+        width: 85%;
+        height: 95%;
+    }
+
+    #bMeme{
+        padding: 0.7rem 0.3rem;
+        font-size: 10px;
+        bottom: 0.1rem;
+        right: 0.1rem;
+    }
+}

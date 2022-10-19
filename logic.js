@@ -237,3 +237,10 @@ class CalculadoraCientifica extends CalculadoraBasica {
 }
 
 const calculadora = new CalculadoraCientifica();
+
+const bMeme = document.getElementById("bMeme")
+
+function memear(){
+    return alert("Acá va el meme")
+}
+
