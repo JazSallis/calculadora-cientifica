@@ -194,7 +194,7 @@ h1{
 @media screen and (max-width:750px){
     #calculadora{
         width: 85%;
-        height: 95%;
+        height: 70%;
     }
 
     #displayBox{
