@@ -5,343 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <script src="logic.js"></script>
+    <!-- <script src="logic.js"></script> -->
     <title>Calculadora científica</title>
   </head>
 
   <body>
+
     <section id="contenedor">
+
       <div id="calculadora">
+
         <div id="contenedor-pantalla">
+
           <h1>Calculadora Científica</h1>
-          <input id="displayBox" type="text" readonly />
+
+          <input type="text" id="displayBox" maxlength="20" readonly />
           <!-- id="displayBox" -->
         </div>
 
         <div id="cont-botones">
-
-            <button
-            class="botoncitos displaytable-cell"
-            id="bMClear"
-            onclick="calculadora.clearMemory()"
+          <button
+            class="botoncitos borrar displaytable-cell"
+            id="bClear"
+            value="C"
           >
-            MC
+            C
           </button>
 
           <button
-          class="botoncitos displaytable-cell"
-          id="bMRead"
-          onclick="calculadora.readMemory()"
-        >
-          MR
-        </button>
-
-        <button
-        class="botoncitos displaytable-cell"
-        id="bMAdd"
-        onclick="calculadora.addToMemory()"
-      >
-        M+
-      </button>
-
-      <button
-      class="botoncitos displaytable-cell"
-      id="bMSub"
-      onclick="calculadora.subtractFromMemory()"
-    >
-      M-
-    </button>
-
-    <button
             class="botoncitos displaytable-cell"
-            id="bMSave"
-            onclick="calculadora.saveToMemory()"
+            id="bSine"
+            value="sin"
           >
-            MS
+            sin
           </button>
 
+          <button
+            class="botoncitos displaytable-cell"
+            id="bCosine"
+            value="cos"
+          >
+            cos
+          </button>
 
           <button
-          class="botoncitos displaytable-cell"
-          id="bSquare"
-          onclick="calculadora.square()"
-        >
-          x^2
-        </button>
+            class="botoncitos displaytable-cell"
+            id="bTangent"
+            value="tan"
+          >
+            tan
+          </button>
 
-        <button
-        class="botoncitos displaytable-cell"
-        id="bNthPowerOfTenOr"
-        onclick="calculadora.nthTenPower()"
-      >
-        10^x
-      </button>
+          <button
+            class="botoncitos borrar displaytable-cell"
+            id="bDelete"
+            value="<="
+          >
+            Del
+          </button>
 
+          <button
+            class="botoncitos displaytable-cell"
+            id="bCube"
+            value="x³"
+          >
+            x³
+          </button>
 
-
-      <button
-      class="botoncitos displaytable-cell"
-      id="bSine"
-      onclick="calculadora.writeMathFunction('sin(')"
-    >
-      sin
-    </button>
-
-    <button
-      class="botoncitos displaytable-cell"
-      id="bCosine"
-      onclick="calculadora.writeMathFunction('cos(')"
-    >
-      cos
-    </button>
-
-    <button
-      class="botoncitos displaytable-cell"
-      id="bTangent"
-      onclick="calculadora.writeMathFunction('tan(')"
-    >
-      tan
-    </button>
-
-    <button
-          class="botoncitos displaytable-cell"
-          id="bCube"
-          onclick="calculadora.cube()"
-        >
-          x^3
-        </button>
-
-        <button
+          <button
             class="botoncitos displaytable-cell"
             id="bInverseNumber"
-            onclick="calculadora.inverseNumber()"
+            value="x!"
           >
-            x^-1
+            x!
           </button>
-
 
           <button
             class="botoncitos displaytable-cell"
-            id="bSqrt"
-            onclick="calculadora.writeMathFunction('sqrt(')"
+            id="bNRaiz"
+            value="n√"
           >
-            sqrt
+            n√
           </button>
 
           <button
             class="botoncitos displaytable-cell"
             id="bLogOr"
-            onclick="calculadora.writeMathFunction('log(')"
+            value="log"
           >
             log
           </button>
 
           <button
-            class="botoncitos displaytable-cell"
-            id="bNaturalLog"
-            onclick="calculadora.writeMathFunction('ln(')"
+            class="botoncitos basicas displaytable-cell"
+            id="+"
+            value="+"
           >
-            ln
+            +
           </button>
-
-
-
-
-
-
-
-          <button
-          class="botoncitos displaytable-cell"
-          id="bPercentage"
-          onclick="calculadora.writeMathFunction('e')"
-        >
-          e
-        </button>
-
-        <button
-          class="botoncitos borrar displaytable-cell"
-          id="bClearDisplayCE"
-          onclick="calculadora.clearDisplay()"
-        >
-          CE
-        </button>
-
-        <button
-          class="botoncitos borrar displaytable-cell"
-          id="bClearDisplayC"
-          onclick="calculadora.clearDisplay()"
-        >
-          C
-        </button>
-
-        <button
-          class="botoncitos borrar displaytable-cell"
-          id="bDelete"
-          onclick="calculadora.eraseLastInput()"
-        >
-          Del
-        </button>
-
-        <button
-          class="botoncitos basicas displaytable-cell"
-          id="bDivide"
-          onclick="calculadora.writeOperatorToDisplay('/')"
-        >
-          /
-        </button>
-        
-
-        
 
           <button
             class="botoncitos displaytable-cell"
-            id="bPi"
-            onclick="calculadora.writeMathFunction('PI')"
+            id="bXCuadrado"
+            value="x²"
           >
-            π
+            x²
           </button>
 
           <button
-            class="botoncitos numeros displaytable-cell"
-            id="bSeven"
-            onclick="calculadora.writeToDisplay('7')"
+            class="botoncitos displaytable-cell"
+            id="bNumX"
+            value="x^"
           >
-            7
+            x^
           </button>
 
           <button
-            class="botoncitos numeros displaytable-cell"
-            id="bEight"
-            onclick="calculadora.writeToDisplay('8')"
+            class="botoncitos displaytable-cell"
+            id="bRaizCubo"
+            value="³√"
           >
-            8
+            ³√
           </button>
 
           <button
-            class="botoncitos numeros displaytable-cell"
-            id="bNine"
-            onclick="calculadora.writeToDisplay('9')"
+            class="botoncitos displaytable-cell"
+            id="bRaiz"
+            value="√"
           >
-            9
+            √
           </button>
 
           <button
             class="botoncitos basicas displaytable-cell"
-            id="bMultiply"
-            onclick="calculadora.writeOperatorToDisplay('*')"
-          >
-            x
-          </button>
-
-          <button
-            class="botoncitos displaytable-cell"
-            id="bFactorial"
-            onclick="calculadora.calculateFactorial()"
-          >
-            n!
-          </button>
-
-          <button
-            class="botoncitos numeros displaytable-cell"
-            id="bFour"
-            onclick="calculadora.writeToDisplay('4')"
-          >
-            4
-          </button>
-
-          <button
-            class="botoncitos numeros displaytable-cell"
-            id="bFive"
-            onclick="calculadora.writeToDisplay('5')"
-          >
-            5
-          </button>
-
-          <button
-            class="botoncitos numeros displaytable-cell"
-            id="bSix"
-            onclick="calculadora.writeToDisplay('6')"
-          >
-            6
-          </button>
-
-          <button
-            class="botoncitos basicas displaytable-cell"
-            id="bSubtract"
-            onclick="calculadora.writeOperatorToDisplay('-')"
+            id="bResta"
+            value="-"
           >
             -
           </button>
 
           <button
             class="botoncitos displaytable-cell"
-            id="bToggleSign"
-            onclick="calculadora.toggleSign()"
+            id="bPorcent"
+            value="%"
           >
-            (-)
+            %
           </button>
 
           <button
             class="botoncitos numeros displaytable-cell"
-            id="bOne"
-            onclick="calculadora.writeToDisplay('1')"
+            id="7"
+            value="7"
+          >
+            7
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="8"
+            value="8"
+          >
+            8
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="9"
+            value="9"
+          >
+            9
+          </button>
+
+          <button
+            class="botoncitos basicas displaytable-cell"
+            id="bDivide"
+            value="/"
+          >
+            /
+          </button>
+
+          <button
+            class="botoncitos displaytable-cell"
+            id="bPercentage"
+            value="e"
+          >
+            e
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="4"
+            value="4"
+          >
+            4
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="5"
+            value="5"
+          >
+            5
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="6"
+            value="6"
+          >
+          6
+          </button>
+
+          <button
+            class="botoncitos basicas displaytable-cell"
+            id="bMultiply"
+            value="*"
+          >
+            x
+          </button>
+
+          <button
+            class="botoncitos displaytable-cell"
+            id="bPi"
+            value="π"
+          >
+            π
+          </button>
+
+          <button
+            class="botoncitos numeros displaytable-cell"
+            id="1"
+            value="1"
           >
             1
           </button>
 
           <button
             class="botoncitos numeros displaytable-cell"
-            id="bTwo"
-            onclick="calculadora.writeToDisplay('2')"
+            id="2"
+            value="2"
           >
             2
           </button>
 
           <button
             class="botoncitos numeros displaytable-cell"
-            id="bThree"
-            onclick="calculadora.writeToDisplay('3')"
+            id="3"
+            value="3"
           >
             3
           </button>
 
           <button
             class="botoncitos basicas displaytable-cell"
-            id="bAdd"
-            onclick="calculadora.writeOperatorToDisplay('+')"
+            id="masmenos"
+            value="±"
           >
-            +
+            ±
           </button>
 
+          <button
+            class="botoncitos basicas displaytable-cell"
+            id="bOpenParentheses"
+            value="("
+          >
+            (
+          </button>
 
           <button
-          class="botoncitos displaytable-cell"
-          id="bOpenParentheses"
-          onclick="calculadora.writeOperatorToDisplay('(')"
-        >
-          (
-        </button>
-
-        <button
-          class="botoncitos displaytable-cell"
-          id="bCloseParentheses"
-          onclick="calculadora.writeOperatorToDisplay(')')"
-        >
-          )
-        </button>
+            class="botoncitos basicas displaytable-cell"
+            id="bCloseParentheses"
+            value=")"
+          >
+            )
+          </button>
 
           <button
             class="botoncitos numeros displaytable-cell"
-            id="bZero"
-            onclick="calculadora.writeToDisplay('0')"
+            id="0"
+            value="0"
           >
             0
           </button>
 
           <button
-            class="botoncitos displaytable-cell"
+            class="botoncitos basicas displaytable-cell"
             id="bDot"
-            onclick="calculadora.writeToDisplay('.')"
+            value="."
           >
             .
           </button>
@@ -349,13 +299,20 @@
           <button
             class="botoncitos displaytable-cell"
             id="bEquals"
-            onclick="calculadora.solveOperation()"
+            value="="
           >
             =
           </button>
+
         </div>
+
       </div>
+
       <button id="bMeme" onclick="memear()">MEME</button>
+
     </section>
+
+    <script src="index.js"></script>
+
   </body>
 </html>
