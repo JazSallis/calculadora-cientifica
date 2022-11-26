@@ -206,3 +206,214 @@ function nRoot() {
 function exp() {
   display.value = Math.exp(display.value);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*i
+import React, { useState } from "react";
+import Boton from "./Boton";
+import Pantalla from "./Pantalla";
+
+const ContCalc = () => {
+
+  const e = Math.E;
+  const π = Math.PI;
+
+  const valores = ["C", "sin", "cos", "tan", "Del", "x³", "x!", "ⁿ√", "log", "+", "x²", "xⁿ", "∛ ", "√", "-", "%", "7", "8", "9", "/", "e", "4", "5", "6", "*", "π", "1", "2", "3", "±", "(", ")", "0", ".", "=",];
+
+
+  const [ant, setAnt] = useState('');
+  const [pos, setPos] = useState('');
+
+ 
+  function factorial(n) {
+    if (n > 1) {
+      return n * factorial(n - 1);
+    }
+    return 1;
+  }
+
+  function seno(n) {
+    return Math.sin(n);
+  }
+
+  function coseno(n) {
+    return Math.cos(n);
+  }
+
+  function tangente(n) {
+    return Math.tan(n);
+  }
+
+  function potencia(b, e) {
+    return Math.pow(b, e);
+  }
+
+  function raiz(n) {
+    return Math.sqrt(n);
+  }
+
+  function raiz_n(x, n) {
+    return Math.pow(x, 1 / n);
+  }
+
+  function ln(n) {
+    return Math.log(n);
+  }
+
+  function log(n) {
+    return Math.log10(n);
+  }
+
+  function raizCubica(n) {
+    return Math.pow(n, 1 / 3);
+  }
+
+  const funcion = (valor) => {
+    let calculo = '';
+    switch (valor) {
+      case 'C':
+        setAnt('');
+        setPos('');
+        break;
+
+      case 'Del':
+        setAnt(ant.substring(0, ant.length - 1));
+        break;
+
+
+      case 'x²':
+        setAnt(ant + 'potencia(');
+        setPos(',2)' + pos);
+        break;
+
+      case 'x³':
+        setAnt(ant + 'potencia(');
+        setPos(',3)' + pos);
+        break;
+
+      case 'xⁿ':
+        setAnt('potencia(' + ant + ',');
+        setPos(')' + pos);
+        break;
+
+      case '√':
+        setAnt(ant + 'raiz(');
+        setPos(')' + pos);
+        break;
+
+      case '∛':
+        setAnt(ant + 'raizCubica(');
+        setPos(')' + pos);
+        break;
+
+      case 'ⁿ√':
+        setAnt('raiz_n(' + ant + ',');
+        setPos(')' + pos);
+        break;
+
+      case 'sin':
+        setAnt(ant + 'seno(');
+        setPos(')' + pos);
+        break;
+
+      case 'cos':
+        setAnt(ant + 'coseno(');
+        setPos(')' + pos);
+        break;
+
+      case 'tg':
+        setAnt(ant + 'tangente(');
+        setPos(')' + pos);
+        break;
+
+      case 'ln':
+        setAnt(ant + 'ln(');
+        setPos(')' + pos);
+        break;
+
+      case 'log':
+        setAnt(ant + 'log(');
+        setPos(')' + pos);
+        break;
+
+      case 'x!':
+        setAnt(ant + 'factorial(');
+        setPos(')' + pos);
+        break;
+
+      case '=':
+        try {
+          calculo = eval(ant + pos);
+        } catch (error) {
+          calculo = "ERROR";
+        }
+        setAnt(calculo);
+        setPos('');
+        break;
+
+      default:
+        setAnt(ant + valor);
+    }
+  };
+
+  return (
+    <>
+      <Pantalla resultado={ant + pos} />
+
+      <div id="cont-botones">
+
+        {valores.map((k) => (
+
+          <Boton 
+          valor={k} 
+          className={k === "=" ? "bEquals" : k === "+" || k === "-" || k === "*" || k === "/" || k === "." || k === "(" || k === ")" || k === "±" ? "botoncitos basicas" : k === "1" || k === "2" || k === "3" || k === "4" || k === "5" || k === "6" || k === "7" || k === "8" || k === "9" || k === "0" ? "botoncitos numeros" : k === "C" || k === "Del" ? "botoncitos borrar" : "botoncitos"} funcion={funcion}/>
+
+        ))}
+
+      </div>
+    </>
+  );
+};
+
+export default ContCalc;
+
+*/
